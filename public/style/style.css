@@ -1,0 +1,781 @@
+html{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+}
+
+
+h1{
+    font-size: 50px;
+}
+
+#particles-js{
+    background-image: url('image1.jpg');
+    height: 100vh;
+}
+
+
+/* ########################### Menu bar Style ############################### */
+
+*{
+    box-sizing:border-box;
+    margin:0 auto;
+    font-family:Segoe UI;
+ }
+
+ .container {
+    width:90%;
+    
+ }
+
+ .fixed-top {
+   position: fixed;
+   top: 0;
+   right: 0;
+   left: 0;
+   z-index: 1030;
+ }
+
+ header {
+    background-image:url('background1.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: 0 -100px;
+    height:500px;   
+ }
+ /*kode untuk navigasinya*/
+ nav.navbar {
+    background-color:white;
+    border-bottom:4px double #0055FF;
+   /*overflow:hidden; */
+   height: 90px;
+  
+ }
+ nav.navbar ul {
+    background-color:white;
+    list-style: none;
+    float:right;
+    padding:0;
+ }
+ nav.navbar ul li{
+    display:inline-block;
+ }
+ nav.navbar ul li a{
+    padding:20px;
+    color:#000000;
+    font-weight:600;
+ }
+
+ /*kode untuk logo*/
+ .img-responsive {
+    display:block;
+    max-width:100%;
+    height:auto;
+ }
+ a{
+    text-decoration:none;
+    float:left;
+ }
+ a.logo {
+    padding:10px;
+ }
+ a.logo > span {
+    float: right;
+    padding: 10px;
+    background: #2a95d3;
+    color: #FFFFFF;
+    border-radius: 50px;
+    margin-top: 5px;
+ }
+ a.logo > img {
+    float:left;
+    width:50px;
+    height:50px;
+ }
+ @media (max-width: 650px){
+
+  a.logo,a.logo img,nav.navbar ul{
+    float:none;
+    text-align:center;
+  }
+  a.logo span{
+    float:none;
+    display:block;
+  }
+}
+
+
+/*
+  nav ul{
+      list-style: none;
+      padding:0;
+      background:#444;
+  }
+  
+  nav ul li a{
+      color:#ddd;
+      text-decoration: none;
+      padding: .8rem 1rem;
+      display: block;
+      line-height: 1;
+  }
+  nav ul li{
+      border-bottom: 1px dotted #ddd;
+  }
+  
+  
+  nav div:first-child{
+      background:#222;
+  }
+  nav div:first-child h1{
+      line-height: 0;
+      padding: .8rem 0rem;
+      text-align: center;
+  }
+  nav div:first-child img{
+      filter: contrast(0);
+  }
+  
+  nav div:first-child h1, nav ul{
+      margin:0;
+  }
+  
+  
+  
+  @media only screen and (min-width: 30em){
+      nav{
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        background: #222;
+        align-items: center;
+        width: 100%;
+      }
+      
+      nav ul{
+          display: flex;
+          align-items: center;
+          background:none;
+          flex-wrap: wrap;
+      }
+      nav div:first-child h1{
+          padding: 0;
+          margin:0 1rem;
+      }
+      nav div:first-child img{
+          height: 40px;
+          
+      }
+      nav ul li{
+          border-bottom:none;
+          flex: 1 0 auto;
+          position: relative;
+      }
+      nav ul li a{
+          padding:1.2rem 1rem;
+      }
+      nav ul li a::before, nav ul li a::after{
+          content: "";
+          position: absolute;
+          bottom:0;
+          right: 0;
+          width:0%;
+          height: 2px;
+          background:red;
+          transition: .2s width ease-in-out;
+      }
+      
+      nav ul li a::before{
+          left:0;
+      }
+      
+      nav ul li a:hover::after,nav ul li a:hover::before{
+          width: 50%;
+      } 
+     
+  }
+  */
+
+/* ####################################################################### */
+
+#circulo_chat {
+  left: 85%;
+  top: 94%;
+  margin-left: -9%;
+  position: fixed;
+  display: inline-block;
+  height: 50px;
+  width: 300px;
+  background-color: rgb(143, 34, 52);
+  border-radius: 50px;
+  
+  /*box-shadow: inset -10px -10px 10px rgb(42, 146, 11), inset 3px 3px 5px #089476; */
+}
+
+#circulo_chat::before {
+  content: "Converse com a Cleide";
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: Arial;
+  font-size: 22px;
+  line-height: 45px;
+  display: block;
+  border-radius: 50px;
+}
+
+#circulo_chat_1 {
+  left: 85%;
+  top: 94%;
+  margin-left: -9%;
+  position: fixed;
+  display: inline-block;
+  height: 50px;
+  width: 300px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50px;
+  /* box-shadow: inset -10px -10px 10px rgb(199, 231, 17), inset 3px 3px 5px #08aa08; */
+}
+
+#circulo_chat_1::before {
+  content: "Converse com a Cleide";
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-family: Arial;
+  font-size: 22px;
+  line-height: 45px;
+  display: block;
+}
+
+/* ################################ CHAT CLEIDE ############################# */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.bg {
+  width: 50%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  /* background: url('../imagens/fundo.png') no-repeat 0 0; */
+  filter: blur(80px);
+  transform: scale(1.2);
+}
+
+.chat {
+    opacity: 1;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-: ;
+    position: fixed;  
+    ht: calc(100% - 60px)!important;
+    max-height: 700px!important;
+    min-height: 214px!important;
+    width: 320px;
+    background: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    bottom: 5%;
+    left: 70%;
+    margin: auto;
+    z-index: 10;
+    box-shadow: 2px 10px 40px rgba(22,20,19,0.4);
+    top: 17%;
+    -webkit-transition: 0.3s all ease-out 0.1s, transform 0.2s ease-in;
+    -moz-transition: 0.3s all ease-out 0.1s, transform 0.2s ease-in;
+}
+
+#textInput {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    color: #1c2058;
+    letter-spacing: 0.015rem;
+    line-height: 1.3125rem;
+    height: 2.5rem;
+    width: 100%;
+    padding-left: 0.125rem;
+    margin-bottom: -0.125rem;
+    overflow: auto;
+}
+
+.chat-title {
+
+    position: initial;
+    z-index: 2;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    color: #777;
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+
+
+.circle {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: -2em auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-border-radius: 99em;
+  -moz-border-radius: 99em;
+  border-radius: 99em;
+  border: 2px solid #fff;
+
+}
+
+.avenue-messenger div.agent-face {
+    position: absolute;
+    left: 0;
+    top: -50px;
+    right: 0;
+    margin: auto;
+    width: 101px;
+    height: 50px;
+    background: transparent;
+  z-index:12;
+    
+
+}
+
+.avenue-messenger div.agent-face {
+	top:-10px!important;
+}
+
+
+@media only screen and (min-device-width: 667px) {
+div.half {
+
+  margin: auto;
+  width: 100%;
+    height: 40px;
+    background-color: #fff;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+  
+    border-bottom: 0;
+  box-shadow:1px 4px 20px rgba(22,20,19,0.6);
+  -webkit-box-shadow:1px 4px 20px rgba(22,20,19,0.6) ;
+  -moz-box-shadow:1px 4px 20px rgba(22,20,19,0.6);
+}
+
+
+.messages {
+  flex: 1 1 auto;
+  color: rgba(255, 255, 255, .5);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 336px;
+	overflow:  visible | hidden | scroll | auto | inherit
+  & .messages-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 101%;
+    width: 100%;
+  }
+
+  
+  .message {
+    clear: both;
+    float: left;
+    padding: 6px 10px 7px;
+    border-radius: 10px 10px 10px 0;
+    background: rgba(0, 0, 0, .3);
+    margin: 8px 0;
+    font-size: 11px;
+    line-height: 1.4;
+    margin-left: 35px;
+    position: relative;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+    
+    .timestamp {
+      position: absolute;
+      bottom: -15px;
+      font-size: 9px;
+      color: rgba(255, 255, 255, .3);
+    }
+    
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      border-top: 6px solid rgba(0, 0, 0, .3);
+      left: 0;
+      border-right: 7px solid transparent;
+    }
+    
+    .avatar {
+      position: absolute;
+      z-index: 1;
+      bottom: -15px;
+      left: -35px;
+      border-radius: 30px;
+      width: 30px;
+      height: 30px;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      border: 2px solid rgba(255, 255, 255, 0.24);
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    
+    &.message-personal {
+      float: right;
+      color: #fff;
+      text-align: right;
+      background: linear-gradient(120deg, #248A52, #257287);
+      border-radius: 10px 10px 0 10px;
+      
+      &::before {
+        left: auto;
+        right: 0;
+        border-right: none;
+        border-left: 5px solid transparent;
+        border-top: 4px solid #257287;
+        bottom: -4px;
+      }
+    }
+    
+    &:last-child {
+      margin-bottom: 30px;
+    }
+    
+    &.new {
+      transform: scale(0);
+      transform-origin: 0 0;
+      animation: bounce 500ms linear both;
+    }
+    
+    &.loading {
+
+      &::before {
+        @include ball;
+        border: none;
+        animation-delay: .15s;
+      }
+
+      & span {
+        display: block;
+        font-size: 0;
+        width: 20px;
+        height: 10px;
+        position: relative;
+
+        &::before {
+          @include ball;
+          margin-left: -7px;
+        }
+
+        &::after {
+          @include ball;
+          margin-left: 7px;
+          animation-delay: .3s;
+        }
+      }
+    }
+    
+  }
+}
+
+.message-box {
+  flex: 0 1 40px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  position: relative;
+  border-radius: 20px;
+  
+  & .message-input {
+    background: none;
+    border: none;
+    outline: none!important;
+    resize: none;
+    color: rgba(255, 255, 255, .7);
+    font-size: 11px;
+    height: 17px;
+    margin: 0;
+    padding-right: 20px;
+    width: 265px;
+  }
+  
+  textarea:focus:-webkit-placeholder{
+      color: transparent;
+  }
+  
+  & .message-submit {
+    position: absolute;
+    z-index: 1;
+    top: 9px;
+    right: 10px;
+    color: #fff;
+    border: none;
+    background: #248A52;
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 6px 10px; 
+    border-radius: 10px;
+    outline: none!important;
+    transition: background .2s ease;
+    
+    &:hover {
+      background: #1D7745;
+    }
+  }
+}
+
+
+.from-user {
+    text-align: right;
+}
+
+.from-user .message-inner {
+    position: relative;
+    font-size: 1rem;
+    color: #000;
+    letter-spacing: 0.015rem;
+    line-height: 1.3125rem;
+    background: #77a9c2;
+    border-radius: 1.25rem;
+    border-bottom-right-radius: 0;
+    text-align: left;
+    display: inline-block;
+    margin-left: 2.5rem;
+    min-width: 2.5rem;
+}
+
+.from-user .message-inner p {
+    margin: 0.3125rem;
+    padding: 0 0.9375rem;
+}
+
+.from-user .message-inner:before, .from-user .message-inner:after {
+    content: "";
+    position: absolute;
+}
+
+.from-user .message-inner:before {
+    z-index: -2;
+    bottom: -0.375rem;
+    right: 0;
+    height: 0.375rem;
+    width: 0.5rem;
+    background: rgb(143, 34, 52);
+}
+
+.from-user .message-inner:after {
+    z-index: -1;
+    bottom: -0.5rem;
+    right: 0;
+    height: 0.5rem;
+    width: 0.5rem;
+    background: #fff;
+    border-top-right-radius: 1.25rem;
+}
+
+.from-watson .message-inner {
+    position: relative;
+    border-radius: 1.5625rem;
+    font-size: 1rem;
+    color: #101110;
+    letter-spacing: 0.015rem;
+    line-height: 1.3125rem;
+}
+
+.from-watson p {
+    margin: 0.3125rem;
+    padding: 0 1.25rem;
+    font-weight: 500;
+}
+
+.from-watson p:before {
+    content: "";
+    background: rgb(143, 34, 52);
+    /*background: url(imagens/lua.jpeg) no-repeat;*/
+    border-radius: 5px;
+    position: absolute;
+    z-index: 2;
+    left: 0.4375rem;
+    width: 0.3125rem;
+    height: 1.3125rem;
+    line-height: 1.3125rem;
+}
+
+#usuarioChat {
+    width: 20em;
+    height: 20em;
+    overflow: auto;
+}
+
+.video {
+    position: absolute;
+    left: 4%;
+    top: 209px;
+    width: 450px;
+    height: 300px;
+}
+
+.titulo {
+  color: aliceblue;
+  position: static;
+  display: block;
+  margin-left: 38%;
+  margin-right: auto;
+  width: 50%;
+  padding: 13rem 0;
+}
+
+/* ################# DIVISÂO DE TELA PARA O MENU ##########################################*/
+
+#home {
+  background: #2483b6;
+  width: 100%;
+  height: 900px;
+  margin: 0 auto;
+}
+
+#sobreDireitosConsumidor {
+  color: rgb(0, 0, 0);
+  display: block;
+  position: static;
+  padding: 8rem 0;
+  background: rgb(153, 204, 255);
+}
+
+#informacoes {
+  color: rgb(0, 0, 0);
+  display: block;
+  position: static;
+  padding: 15rem 0;
+  background: rgb(255, 255, 255);
+}
+
+#contato {
+  color: rgb(0, 0, 0);
+  display: block;
+  position: static;
+  padding: 2rem 0;
+  background: rgb(199, 197, 197);
+}
+
+#ajuda {
+  color: aliceblue;
+  display: block;
+  position: static;
+  padding: 15rem 0;
+  background: #e75d61;
+  
+  
+}
+
+.ajusteVideo {
+  color: aliceblue;
+  height: 900px;
+  width: 60px;
+}
+
+.footer {
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  background: #954547;
+  
+}
+
+.textoStyle {
+  position: static;
+}
+
+
+/*##################################### Contato #######################################*/
+
+.container-contact {
+  max-width: 800px;
+  height: auto;
+ /* background:#f5f6fa ;*/
+  margin: 50px auto;
+  box-sizing: border-box;
+  padding: 40px;
+}
+
+.contato-p {
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 45px;
+  margin-bottom: 20px;
+  background: linear-gradient(to right ,#7f8fa6 ,#353b48 );
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+
+}
+
+.contact-input,
+.msg .area{
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border: 2px solid white;
+  font-size: 14px;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.5s;
+}
+
+.login .contact-input{
+  width: 48%;
+  float: left;
+  margin-right: 4%;
+}
+
+.login .contact-input:last-child{
+  margin-right: 0;
+}
+
+.msg .area{
+  height: 200px;
+}
+
+.contact-input:focus,
+.area:focus{
+  border: 2px solid #718093;
+}
+
+.contact-buttom{
+  width: 100%;
+  text-align: center;
+}
+
+.contact-buttom .btn{
+  background: linear-gradient(to right ,#7f8fa6 ,#353b48);
+  padding: 12px 85px !important;
+  font-size: 19px;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+::-webkit-input-placeholder{
+  font-family: "oswald";
+  color: #353b48;
+}
+

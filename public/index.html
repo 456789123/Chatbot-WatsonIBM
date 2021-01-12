@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ptr" ng-app="app" >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Direitos do consumidor</title>
+
+        <link rel="stylesheet" href="style/bootstrap.min.css" />
+        <link rel="stylesheet" href="style/style.css">
+
+        <script src="javaScript/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+		<script src="javaScript/angular.min.js"></script>
+        <script src="javaScript/angular-messages.js"></script>
+        
+        <script src="javaScript/app.js"></script>
+        <script src="javaScript/appCtrl.js"></script>
+        <script src="javaScript/appService.js"></script>
+        
+        
+    </head>
+    <body>
+
+        <div ng-controller = "appCtrl" >
+            
+            <nav class="navbar fixed-top">
+                <div class="container fixed-top">
+                    <a href="#" class="logo">
+                        <img src="./imagens/logo.png" alt="Logo" class="img-responsive">
+                        <span>Robô Cleide</span>
+                    </a>
+                    <ul>
+                        <li><a href="#" class="active"> &nbsp;Home</a></li>
+                        <li><a href="#sobreDireitosConsumidor"> &nbsp;Sobre</a></li>
+                        <li><a href="#informacoes"> &nbsp;Informações</a></li>
+                        <li><a href="#contato"> &nbsp;Contato</a></li>
+                        <li><a href="#ajuda">Dicas&nbsp;<i class="fa fa-angle-down"></i></a></li>
+                          
+                    </ul>
+                </div>
+            </nav> 
+           
+             
+            <div class="chat" ng-show="mostrar">
+                <div class="agent-face" >
+                    <img class="agent circle" src="./imagens/boneca3d.png" alt="Cleide Reis">
+                    <div class="chat-title" ng-click="aparecerDesaparecer()">
+                        <h1>Cleide</h1>
+                        <h2>Direitos do consumidor</h2>
+                            
+                    </div>
+                    <div class="messages">
+                        <div id="usuarioChat"></div>
+                    </div>
+                    <div class="message-box">
+                        <input type="text" ng-model="textInput" id="textInput" placeholder="Escreva aqui." ng-keypress="enviarTexto()" type="text">
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="{{stiloChat}}" ng-click="aparecerDesaparecer()" ng-mouseenter="cursoCima()" ng-mouseleave="cursoSair()" ng-show="!mostrar"></div>
+
+            <div id="home">
+                <div class="container particles-js">
+                    <div class="row">            
+                        <div class="col-md-auto">
+                            <div class="col col-lg-2 ajusteVideo">
+                                <video class="video" controls>
+                                <source src="./video/video-watson.mp4" type="video/mp4">
+                                <source src="movie.ogg" type="video/ogg">
+                                Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                        
+                        <div class="titulo col-md-auto textoStyle">
+                            <span>Bem Vindo ao site da</span>
+                            <h1>Robô Cleide</h1>
+                            <p>O chatbot criado para ajudar você consumidor.</p>
+                            Esclareça suas dúvidas acerca do Código de Defesa do Consumidor, </p>
+                            <p>consulte horários de atendimento do Procon - DF, documentos necessários para registrar uma reclamação,</p>
+                            <p>entre outras coisas que competem ao Procon - DF</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sobreDireitosConsumidor"> 
+                <div class="container">
+                    <div class="row" >
+                        <div class="col align-self-start textoStyle">
+                            <h1>Sobre a Robô Cleide</h1>
+                            <p>É provável que você já tenha ouvido falar sobre os direitos do 
+                                consumidor. Eles surgiram de forma consolidada no Brasil em 1988 
+                                e até hoje tem papel fundamental na sociedade brasileira.
+                            </p></br></br>
+                            <p>
+                                Os direitos do consumidor são uma garantia extremamente importante 
+                                do Direito brasileiro. Em uma relação de consumo, o vendedor 
+                                de determinado produto ou serviço geralmente dedicou mais tempo 
+                                à venda de seu produto, do que o comprador irá dedicar à compra.
+                            </p> </br></br>
+                            <p>
+                                A robô Cleide foi criada com o objetivo de auxiliar de forma simples
+                                os consumidores quanto aos seus direitos e deveres. Ela é um chatbot,
+                                "bot" é um diminutivo de robot, sua função é responder as dúvidas
+                                dos consumidores em relação ao Código de Defesa do Consumidor e as
+                                regras de atendimento do Procon - DF, simulando uma conversa, de modo
+                                a fazer com que a pessoa tenha a impressão de estar conversando
+                                com outra pessoa do outro lado.
+                            </p></br></br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="informacoes">
+                <div class="container">
+                    <div class="row" >
+                        <div class="col align-self-start textoStyle">
+                            <h2>Informações</h2><br><br>
+
+                            <p>
+                                <b>Garantia Legal</b> - Ao adquirir um produto ou serviço, o consumidor já tem, após a emissão da nota fiscal, a garantia legal de 3
+ dias para produtosnão duráveis e 90 dias para produtos duráveis. Está estabelecida em lei e é gratuita.    </p>
+                            <p>
+                                <b>Garantia Contratual</b> - É quando o fornecedor concede um prazo maior de garantia. Um ano, por exemplo. Este prazo é facultativo e não obrigatório. A garantia contratual é informada no ato da venda e o consumidor não paga por ela.
+                            </p>
+                            <p>
+                                <b>Garantia Estendida</b> - Aquela oferecida pelas lojas além do prazo legal e do oferecido pelo fabricante. É opcional e o consumidor paga por ela.
+                            </p>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contato">
+                
+                <div class="container-contact">
+                    <p class="contato-p">CONTATO</p>
+                 
+                    <div class="login">
+                      <input type="text" name="#" placeholder="Seu nome" class="contact-input" ng-model="contato.nome">
+                      <input type="text" name="#" placeholder="Seu E-mail" class="contact-input" ng-model="contato.email">
+                    </div>
+                 
+                    <div class="subject">
+                      <input type="text" name="#" placeholder="Objetivo" class="contact-input" ng-model="contato.objetivo">
+                    </div>
+                 
+                    <div class="msg">
+                      <textarea class="area" placeholder="Deixe uma mensagem" ng-model="contato.textoArea"></textarea>
+                    </div>
+                 
+                    <div class="contact-buttom">
+                      <a class="btn" ng-click="enviarMensagemContato(contato)">Enviar</a>
+                    </div>
+                 </div>
+
+            </div>
+
+            <div id="ajuda">
+                
+                <div class="container">
+                    <h2>Dicas</h2><br><br>
+                    <div class="row" >
+                        
+                        
+                        <div class="col-sm">
+                            Guarde a nota fiscal e qualquer outro documento referente à compra.<br><br>
+                            Em caso de problemas, procure a loja e o fabricante. Se não resolver, busque o Procon ou a Justiça.
+                        </div>
+                        <div class="col-sm">
+                            Algumas empresas vendem a garantia estendida sem cumunicar ao cliente. O fato é considerado venda casada, proibido no Código de Defesa do Consumidor.
+                        </div>
+                        <div class="col-sm">
+                            Produtos com defeito dentro do prazo de garantia têm que ser consertados ou trocados.
+                            O consumidor pode também fazer um acordo e recever o dinheiro ou parte dele de volta
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="col align-self-start textoStyle">
+                    <span>© 2019 Robô Cleide. Todos os direitos reservados.</span>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
