@@ -28,7 +28,7 @@ app.get('/conversation/:text*?', function (req, res) {
   //console.log( text );
 
 	assistant.message({
-		workspace_id:'c8f37872-cae6-44b0-ad0d-08ffb922e3ab',
+		workspace_id:'',
 		input: {'text': text},
 	}).then(response => {
 		res.json(response);
