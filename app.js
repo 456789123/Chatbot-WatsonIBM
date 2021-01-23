@@ -17,8 +17,8 @@ app.use(express.static('./public'));
 const port = 3000;
 
 const assistant = new AssistantV1({
-  version: '2019-02-28',
-  iam_apikey: 'P4Lid3Ex9rylItUIsIcXGSr98sRTV4we5IDMfuHDW0Hv',
+  version: '',
+  iam_apikey: '',
   url: 'https://gateway.watsonplatform.net/assistant/api',
 });
 
