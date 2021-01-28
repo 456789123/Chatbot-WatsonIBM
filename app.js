@@ -17,21 +17,20 @@ app.use(express.static('./public'));
 const port = 3000;
 
 const assistant = new AssistantV1({
-  version: '2019-02-28',
-  iam_apikey: 'P4Lid3Ex9rylItUIsIcXGSr98sRTV4we5IDMfuHDW0Hv',
-  url: 'https://gateway.watsonplatform.net/assistant/api',
+	version: '2019-02-28',
+  iam_apikey: '2XSMXJOZdMDUnMgTeXamGLdAgidWrVhIvsKwmvB8loVI',
+  url: 'https://api.us-south.assistant.watson.cloud.ibm.com/instances/635d2697-49f8-4770-8e7d-5bea9cf124b0',
 });
 
 app.get('/conversation/:text*?', function (req, res) {
   const { text } = req.params;
-  
-  //console.log( text );
 
 	assistant.message({
-		workspace_id:'c8f37872-cae6-44b0-ad0d-08ffb922e3ab',
+		workspace_id:'3ba04c68-e926-4f3a-ba30-66959d519d66',
 		input: {'text': text},
 	}).then(response => {
-		res.json(response);
+		console.log( response );
+		res.status(200).send(response);
 	}).catch(err => {
 		console.log(err)
 	});

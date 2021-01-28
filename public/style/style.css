@@ -109,100 +109,6 @@ h1{
   }
 }
 
-
-/*
-  nav ul{
-      list-style: none;
-      padding:0;
-      background:#444;
-  }
-  
-  nav ul li a{
-      color:#ddd;
-      text-decoration: none;
-      padding: .8rem 1rem;
-      display: block;
-      line-height: 1;
-  }
-  nav ul li{
-      border-bottom: 1px dotted #ddd;
-  }
-  
-  
-  nav div:first-child{
-      background:#222;
-  }
-  nav div:first-child h1{
-      line-height: 0;
-      padding: .8rem 0rem;
-      text-align: center;
-  }
-  nav div:first-child img{
-      filter: contrast(0);
-  }
-  
-  nav div:first-child h1, nav ul{
-      margin:0;
-  }
-  
-  
-  
-  @media only screen and (min-width: 30em){
-      nav{
-        position: fixed;
-        display: flex;
-        justify-content: space-between;
-        background: #222;
-        align-items: center;
-        width: 100%;
-      }
-      
-      nav ul{
-          display: flex;
-          align-items: center;
-          background:none;
-          flex-wrap: wrap;
-      }
-      nav div:first-child h1{
-          padding: 0;
-          margin:0 1rem;
-      }
-      nav div:first-child img{
-          height: 40px;
-          
-      }
-      nav ul li{
-          border-bottom:none;
-          flex: 1 0 auto;
-          position: relative;
-      }
-      nav ul li a{
-          padding:1.2rem 1rem;
-      }
-      nav ul li a::before, nav ul li a::after{
-          content: "";
-          position: absolute;
-          bottom:0;
-          right: 0;
-          width:0%;
-          height: 2px;
-          background:red;
-          transition: .2s width ease-in-out;
-      }
-      
-      nav ul li a::before{
-          left:0;
-      }
-      
-      nav ul li a:hover::after,nav ul li a:hover::before{
-          width: 50%;
-      } 
-     
-  }
-  */
-
-/* ####################################################################### */
-
 #circulo_chat {
   left: 85%;
   top: 94%;
@@ -218,7 +124,7 @@ h1{
 }
 
 #circulo_chat::before {
-  content: "Converse com a Cleide";
+  content: "Faça seu pedido aqui!";
   text-align: center;
   color: rgb(255, 255, 255);
   font-family: Arial;
@@ -242,7 +148,7 @@ h1{
 }
 
 #circulo_chat_1::before {
-  content: "Converse com a Cleide";
+  content: "Faça seu pedido aqui!";
   text-align: center;
   color: rgb(0, 0, 0);
   font-family: Arial;
@@ -265,7 +171,7 @@ h1{
   top: 0;
   left: 0;
   z-index: 1;
-  /* background: url('../imagens/fundo.png') no-repeat 0 0; */
+  background: url('../imagens/backimagem.jpg') no-repeat 0 0;
   filter: blur(80px);
   transform: scale(1.2);
 }
@@ -377,7 +283,7 @@ div.half {
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 336px;
+  height: 469px;
 	overflow:  visible | hidden | scroll | auto | inherit
   & .messages-content {
     position: absolute;
@@ -645,7 +551,10 @@ div.half {
 /* ################# DIVISÂO DE TELA PARA O MENU ##########################################*/
 
 #home {
-  background: #2483b6;
+  background-image: url('../imagens/backimagem.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
   width: 100%;
   height: 900px;
   margin: 0 auto;

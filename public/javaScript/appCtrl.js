@@ -2,13 +2,13 @@ app.controller("appCtrl", function ( $scope, appService, $anchorScroll, $locatio
 
     $scope.mostrar = false;
     $scope.stiloChat = "circulo_chat";
-	$scope.textInput = '';
+	$scope.textInput = 'Ola';
 	$scope.watsonResposta = '';
 	$scope.fixar = '';
-	$scope.contao = new Object( );
  
 	var enviar = function( ) {
 		appService.getEnviarMensagem($scope.textInput).then( function( success ){
+			console.log(success.data);
 			$scope.watsonResposta = success.data.output.text[0];
 			mensagemPrint('watson', $scope.watsonResposta );
 		}, function(error){
@@ -45,16 +45,6 @@ app.controller("appCtrl", function ( $scope, appService, $anchorScroll, $locatio
 			mensagemPrint('user', $scope.textInput );
 			enviar( );
 		}
-	}
-
-
-	$scope.enviarMensagemContato = function( contato ) {
-		appService.getPostEnviarContato(contato).then( function( success ){
-		}, function(error){
-			console.log("Aconteceu um problema ao enviar informações do contato.");
-		});
-		
-		$scope.contato = new Object( );
 	}
 
 	
