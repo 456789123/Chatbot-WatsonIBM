@@ -18,8 +18,9 @@ const port = 3000;
 
 const assistant = new AssistantV1({
 	version: '2019-02-28',
-  iam_apikey: '2XSMXJOZdMDUnMgTeXamGLdAgidWrVhIvsKwmvB8loVI',
-  url: 'https://api.us-south.assistant.watson.cloud.ibm.com/instances/635d2697-49f8-4770-8e7d-5bea9cf124b0',
+  	iam_apikey: '2XSMXJOZdMDUnMgTeXamGLdAgidWrVhIvsKwmvB8loVI',
+	url: 'https://api.us-south.assistant.watson.cloud.ibm.com/instances/635d2697-49f8-4770-8e7d-5bea9cf124b0',
+
 });
 
 app.get('/conversation/:text*?', function (req, res) {
@@ -51,7 +52,7 @@ app.post('/contato', jsonParser, function ( req ) {
 		port: 25,
 		auth: {
 			user: 'leroycarvalho2018@gmail.com',
-			pass: 'natureza10'
+			pass: ''
 		},
 		tls: {
 			rejectUnauthorized: false
